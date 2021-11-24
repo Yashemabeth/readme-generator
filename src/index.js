@@ -1,5 +1,4 @@
-console.log ("Hi");
-// Questions 
+// Questions
 // What does this application do?
 // Ask the user a some questions and it generates a follow up questions. Then produce a readme file.
 // How can we ask the user questions?
@@ -15,97 +14,75 @@ console.log ("Hi");
 // - What is your email?
 // - How can people contribute to this app?
 
-// add the rest of the questions
+//const {method, otherMethod} = require('./myModule.js');
+//const { generateReadme, writeToFile } = require("./readme-generator");
+const inquirer = require("inquirer");
 
-// declare questions 
-const questions = [];
+const questions = [
+  {
+    name: "title",
+    message: "What is the title of your project?",
+    type: "input",
+  },
+  {
+    name: "description",
+    message: "What is the description?",
+    type: "input",
+  },
+  {
+    name: "Installation",
+    message: "What is the installation script? (Ask if they have one first???)",
+    type: "input",
+  },
+  {
+    name: "Use",
+    message: "How do I use the application?",
+    type: "input",
+  },
+  {
+    name: "Test",
+    message: "How do I test the application?",
+    type: "input",
+  },
+  {
+    name: "Licence",
+    message: "Choose a license:",
+    type: "input",
+  },
+  {
+    name: "Github",
+    message: "What is your github username?",
+    type: "input",
+  },
+  {
+    name: "Email",
+    message: "What is your email?",
+    type: "input",
+  },
+  {
+    name: "Contribution",
+    message: "How can people contribute to this app?",
+    type: "input",
+  },
+];
 
-const generateTitle = (answers) => {
- return '# TITLE ![MIT](https://img.shields.io/static/v1?label={}&message=<licence>&color=blueviolet)'
-}
-
-const generateTableOfContents = (answers) => {
-    return `## Table of Contents
-
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Tests](#tests)
-    - [Contributing](#contributing)
-    - [License](#license)`;
-  };
-
-  const generateDescripton = (answers) => {
-      return `##Description
-
-      ADD TEXT HERE`
-  };
-
-  const generateInstallation = (answers) => {
-      return `## Installation
-
-      Run the following script to install the packages required for the application:
-      
-      ```
-      ADD TEXT HERE`
-      ```
-  };
-
-  cnst generateUsage =o (answers) => {
-    return `## Usage
-    
-    To use the application run the following script:
-    
-    ```
-    ADD TEXT HERE`
-    ```
-  };
-  
-  const generateTests = (answers) => {
-    return `## Tests
-    
-    To use the application run the following script:
-    
-    ```
-    ADD TEXT HERE`
-    ```
-  };
-  
-  const generateContributing = (answers) => {
-    return `## Contributing
-    
-    ADD TEXT HERE`;
-  };
-  
-  const generateLicense = (answers) => {
-    return `## License
-    
-    ADD TEXT HERE`;
-  };
-  
-  const generateReadme = (answers) => {
-    return `${generateTitle(answers)}
-  
-    ${generateTableOfContents(answers)}
-    
-    ${generateDescription(answers)}
-    
-    ${generateInstallation(answers)}
-    
-    ${generateUsage(answers)}
-    
-    ${generateTests(answers)}
-    
-    ${generateContributing(answers)}
-    
-    ${generateLicense(answers)}
-    `;
-  };
-  
+// .then(function (answer) {
+// instead of console logging put answers into readme generator function
+// two functions: writeToFile and generateReadme
+// writeToFile - creates a readme file
+// generateReadme creates readme markup
+// HINT pass readme markup into writeToFile function
+// console.log(answer);
+// });
 
 const init = async () => {
-// prompt the questions using inquirer
-// generate title using answers 
+  try {
+    const answers = await inquirer.prompt(questions);
+    console.log(answers);
+
+  } catch(err) {
+    console.log(err)
+  } 
 };
 
-init {};
+init();
