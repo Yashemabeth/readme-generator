@@ -17,6 +17,7 @@
 //const {method, otherMethod} = require('./myModule.js');
 //const { generateReadme, writeToFile } = require("./readme-generator");
 const inquirer = require("inquirer");
+const { generateReadme, readmeInit } = require("./readme-generator");
 
 const questions = [
   {
@@ -45,7 +46,7 @@ const questions = [
     type: "input",
   },
   {
-    name: "Licence",
+    name: "License",
     message: "Choose a license:",
     type: "input",
   },
@@ -66,19 +67,15 @@ const questions = [
   },
 ];
 
-// .then(function (answer) {
-// instead of console logging put answers into readme generator function
-// two functions: writeToFile and generateReadme
-// writeToFile - creates a readme file
-// generateReadme creates readme markup
-// HINT pass readme markup into writeToFile function
-// console.log(answer);
-// });
+
 
 const init = async () => {
   try {
     const answers = await inquirer.prompt(questions);
     console.log(answers);
+     //gewnerate the read me file 
+     readmeInit(answers);
+
 
   } catch(err) {
     console.log(err)

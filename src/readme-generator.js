@@ -21,7 +21,7 @@ const generateTableOfContents = (answers) => {
     - [License](#license)`;
   };
 
-  const generateDescripton = (answers) => {
+  const generateDescription = (answers) => {
       return `##Description
 
       ADD TEXT HERE`
@@ -32,17 +32,16 @@ const generateTableOfContents = (answers) => {
 
       Run the following script to install the packages required for the application:
       
-      ```
-      // ADD TEXT HERE```
+      `
     
   };
 
   const generateUsage = (answers) => {
-    return ```## Usage
+    return `## Usage
     
     To use the application run the following script:
     
-    ```
+`
     //ADD TEXT HERE`
     //```
   };
@@ -52,7 +51,7 @@ const generateTableOfContents = (answers) => {
     
     To use the application run the following script:
     
-    ```
+    `
     //ADD TEXT HERE`
     //```
   };
@@ -96,7 +95,7 @@ const generateTableOfContents = (answers) => {
     }
   };
   
-  const init = async () => {
+  const readmeInit = async () => {
     // prompt the questions using inquirer
     // generate readme based on answers
     const readme = generateReadme();
@@ -105,6 +104,5 @@ const generateTableOfContents = (answers) => {
     writeToFile('GENERATED_README.md', readme);
   };
   
-  init();
   
-  module.exports = {writeToFile, generateReadme,}
+  module.exports = {writeToFile, readmeInit,}
