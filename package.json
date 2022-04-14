@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Yashemabeth/readme-generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "nodemon": "^2.0.15"
   }
 }
