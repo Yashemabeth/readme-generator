@@ -88,33 +88,46 @@ const createMd = (answers) => {
   - [Contributors](#contributors)
 
   ## Description
+
   ${answers.description} 
   
   ${
     answers.hasAnInstallation
-      ? `## Installations
+      ? `## Installation
+
   \`\`\`
   ${answers.installation}
   \`\`\``
       : ""
   }
+
    ## User Story
+
    ${answers.user}
+
   ${
     answers.hasATest
       ? `## Tests
   \`\`\`
-  ${answers.tests}
+  ${answers.test}
   \`\`\``
       : ""
   }
+
   ## License
+
   ${answers.license}
+
   ## Github 
+
   [${answers.github}](https://github.com/${answers.github})
+
   ## Email address
+
   ${answers.email}
+
   ## Contributors
+  
   ${answers.contributors}
   `;
 };

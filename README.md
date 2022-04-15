@@ -1,48 +1,41 @@
-# TITLE ![MIT](https://img.shields.io/static/v1?label={}&message=<licence>&color=blueviolet)
+# READ ME GENERATOR ![MIT](https://img.shields.io/static/v1?label={}&message=<licence>&color=blueviolet)
 
 ## Table of Contents
 
-- [TITLE !MIT](#title-)
+- [READ ME GENERATOR !MIT](#read-me-generator-)
   - [Table of Contents](#table-of-contents)
+  - [Github URL](#github-url)
+  - [Recording Link](#recording-link)
   - [Description](#description)
   - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
+  - [Technologies used](#technologies-used)
+  - [Screenshots](#screenshots)
+
+## Github URL
+
+- https://github.com/Yashemabeth/readme-generator
+
+## Recording Link
+
+-
 
 ## Description
 
-ADD TEXT HERE
+As a user when I open the terminal I must type npm run start, Then I will be directed to some questions which I answer. As I answer each question and press enter another question will be populated until the end of the series of questions.
 
 ## Installation
 
-Run the following script to install the packages required for the application:
+Run the following command in the terminal:
 
-```
-ADD TEXT HERE
-```
+- npm run start
 
-## Usage
+## Technologies used
 
-To use the application run the following script:
+- enquirer
 
-```
-ADD TEXT HERE
-```
+## Screenshots
 
-## Tests
-
-To use the application run the following script:
-
-```
-ADD TEXT HERE
-```
-
-## Contributing
-
-ADD TEXT HERE
-
-## License
-
-ADD TEXT HERE
+<img src="./">
+<img src="">
+<img src="">
+<img src="">
